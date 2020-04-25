@@ -3,6 +3,14 @@ buildscript {
     ext.navigationVersion = '2.2.0-rc02'
     ext.ktlintVersion = '0.33.0'
     repositories {
+        //所有的厂库 最好引用国内的
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' } //加入的代码
+        google()
+        jcenter()
+        maven {
+            url "https://repo.eclipse.org/content/repositories/paho-releases/"
+        }
+        maven { url 'https://jitpack.io' }
         google()
         jcenter()
     }
@@ -22,8 +30,16 @@ plugins {
 
 allprojects {
     repositories {
+        //所有的厂库 最好引用国内的
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' } //加入的代码
         google()
         jcenter()
+        mavenLocal()
+        maven {
+            url "https://repo.eclipse.org/content/repositories/paho-releases/"
+        }
+        maven { url 'https://jitpack.io' }
+
     }
     apply plugin: 'com.diffplug.gradle.spotless'
     spotless {

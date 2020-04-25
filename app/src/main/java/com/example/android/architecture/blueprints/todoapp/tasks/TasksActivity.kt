@@ -29,6 +29,7 @@ import com.example.android.architecture.blueprints.todoapp.R
 import com.google.android.material.navigation.NavigationView
 
 /**
+ *
  * Main activity for the todoapp. Holds the Navigation Host Fragment and the Drawer, Toolbar, etc.
  */
 class TasksActivity : AppCompatActivity() {
